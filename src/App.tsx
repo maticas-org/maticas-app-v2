@@ -18,8 +18,8 @@ const App: React.FC = () => {
           >
             Don't have an account? Sign Up
           </button>
-          <SimpleLineChart />
-        (
+        </>
+      ) : (
         <>
           <SignUp />
           <button
@@ -29,6 +29,7 @@ const App: React.FC = () => {
           >
             Already have an account? Log In
           </button>
+          <SimpleLineChart />
         </>
       )}
     </div>
