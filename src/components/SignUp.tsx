@@ -1,5 +1,6 @@
 // SignUp.tsx
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const SignUp: React.FC = () => {
   const [firstName, setFirstName] = useState("");
@@ -87,6 +88,11 @@ const SignUp: React.FC = () => {
       <button type="submit" className="btn btn-primary">
         Sign Up
       </button>
+      <div className="mb-3">
+        <Link type="button" className="btn btn-link" to="/login">
+          Already have an account? Log In
+        </Link>
+      </div>
     </form>
   );
 };

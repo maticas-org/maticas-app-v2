@@ -1,5 +1,6 @@
 // Login.tsx
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState("");
@@ -41,6 +42,11 @@ const Login: React.FC = () => {
       <button type="submit" className="btn btn-primary">
         Log In
       </button>
+      <div className="mb-3">
+        <Link type="button" className="btn btn-link" to="/signup">
+          Don't have an account? Sign Up
+        </Link>
+      </div>
     </form>
   );
 };
