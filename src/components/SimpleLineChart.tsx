@@ -1,19 +1,37 @@
 import React from "react";
 import Plot from "react-plotly.js";
 
-const SimpleLineChart: React.FC = () => {
+interface SimpleLineChartProps {
+  data: { x: number[]; y: number[] };
+  layout: {
+    width: number;
+    height: number;
+    title: string;
+    xaxis: { title: string };
+    yaxis: { title: string };
+  };
+  mode: "lines" | "markers" | "lines+markers";
+  marker: { color: string };
+}
+
+const SimpleLineChart: React.FC<SimpleLineChartProps> = ({
+  data,
+  layout,
+  mode,
+  marker,
+}) => {
   return (
     <Plot
       data={[
         {
-          x: [1, 2, 3],
-          y: [2, 6, 3],
+          x: data.x,
+          y: data.y,
           type: "scatter",
-          mode: "splines+markers",
-          marker: { color: "red" },
+          mode: mode,
+          marker: marker,
         },
       ]}
-      layout={{ width: 720, height: 440, title: "A Simple Line Chart" }}
+      layout={layout}
     />
   );
 };
