@@ -1,5 +1,5 @@
-import SimpleLineChart from "./SimpleLineChart";
-import MultipleVariableChart from "./MultipleVariableChart";
+import SimpleLineChart from "../components/SimpleLineChart";
+import MultipleVariableChart from "../components/MultipleVariableChart";
 
 const Analytics: React.FC = () => {
   return (
