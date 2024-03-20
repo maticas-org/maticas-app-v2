@@ -1,6 +1,6 @@
 # Folder Structure
 
-Absolutely, organizing your TypeScript and React project efficiently is crucial for maintainability and scalability. Let's clarify the role of the `components` folder and then propose a more structured approach to organizing your project.
+Absolutely, organizing your TypeScript and React project efficiently is crucial for maintainability and scalability. Let's clarify and propose a more structured approach to organizing your project.
 
 ### Proposed Folder Structure
 
@@ -68,7 +68,9 @@ For larger projects, especially those involving multiple pages (views) and possi
 
 - **Scalability**: This structure supports scaling, as new components, services, or pages can be added in their respective directories without cluttering the application.
 
-## This is just one way to organize a React + TypeScript project. The best structure depends on the project's size, complexity, and the team's preferences. It's also flexible; feel free to adjust it as your project evolves.
+This is just one way to organize a React + TypeScript project. The best structure depends on the project's size, complexity, and the team's preferences. It's also flexible; feel free to adjust it as your project evolves.
+
+---
 
 # React + TypeScript + Vite
 

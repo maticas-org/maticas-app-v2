@@ -1,7 +1,14 @@
-import SimpleLineChart from "../components/SimpleLineChart";
-import MultipleVariableChart from "../components/MultipleVariableChart";
+import SimpleLineChart from "../components/ui/SimpleLineChart";
+import MultipleVariableChart from "../components/ui/MultipleVariableChart";
+import CountryBubblePlot from "../components/ui/CountryBubblePlot";
 
 const Analytics: React.FC = () => {
+  const plotData = {
+    lon: [4.600695, 4.699775], // Example longitude coordinates
+    lat: [-74.073885, -74.143885], // Example latitude coordinates
+    magnitude: [10, 20], // Example magnitudes for bubble sizes
+  };
+
   return (
     <>
       <div>
@@ -44,6 +51,9 @@ const Analytics: React.FC = () => {
           mode="lines+markers"
           marker={{ color: "red" }}
         />
+      </div>
+      <div>
+        <CountryBubblePlot data={plotData} country="COL" />
       </div>
     </>
   );
