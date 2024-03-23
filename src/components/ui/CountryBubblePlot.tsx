@@ -21,7 +21,7 @@ const CountryBubblePlot: React.FC<CountryBubblePlotProps> = ({
       data={[
         {
           type: "scattergeo",
-          locationmode: "country names",
+          //locationmode: "country names",
           //locations: [country],
           lon: data.lon,
           lat: data.lat,
@@ -40,12 +40,19 @@ const CountryBubblePlot: React.FC<CountryBubblePlotProps> = ({
       ]}
       layout={{
         geo: {
-          scope: `${country}`,
-          projection: { type: "mercator" },
-          center: { lat: 4.5709, lon: -74.2973 },
+          scope: "south america",//`${country}`,
+          projection: { type: "natural earth" },
+          //center: { lat: 4.5709, lon: -74.2973 },
           showland: true,
+          showlakes: true, 
+          showrivers: true,
+          showsubunits: true, 
+          subunitcolor: "Blue",
+          showcountries: true,
+          countrycolor: "Black",
+          resolution: 50,
           landcolor: "rgb(217, 217, 217)",
-          countrycolor: "rgb(204, 204, 204)",
+          //countrycolor: "rgb(204, 204, 204)",
         },
         width: 800,
         height: 600,

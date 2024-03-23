@@ -1,0 +1,38 @@
+  
+  .date-range-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Adds automatic margin on the sides to center the container, and optional margin on top and bottom */
+  }
+  
+  .date-picker-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5vw; /* Adds automatic margin on the sides to center the container, and optional margin on top and bottom */
+  }
+
+  .centered-container {
+    display: flex;
+    justify-content: center; /* Centers the child horizontally */
+    align-items: center; /* Centers the child vertically (if needed) */
+    width: 80vw; /* Sets the width to 80% of the viewport width */
+    max-width: 80vw; /* Ensures the width does not exceed 80% of the viewport width */
+    margin: 0 auto; /* Adds automatic margin on the sides to center the container, and optional margin on top and bottom */
+    padding: 5px; /* Adds some space inside the container around your content */
+    box-sizing: border-box; /* Ensures padding doesn't add to the width */
+  }
+
+  
+  .plot {
+    display: flex;
+    justify-content: center; /* Centers the child horizontally */
+    align-items: center; /* Centers the child vertically (if needed) */
+    width: 80vw; /* Sets the width to 80% of the viewport width */
+    max-width: 80vw; /* Ensures the width does not exceed 80% of the viewport width */
+    margin: 0 auto; /* Adds automatic margin on the sides to center the container, and optional margin on top and bottom */
+    padding: 20px; /* Adds some space inside the container around your content */
+    box-sizing: border-box; /* Ensures padding doesn't add to the width */
+  }
+  

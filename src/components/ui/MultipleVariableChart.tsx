@@ -1,5 +1,6 @@
 import React from "react";
 import Plot from "react-plotly.js";
+import '../../App.css';
 
 interface DataSeries {
   x: number[]; // Assuming 'x' is always time
@@ -35,6 +36,8 @@ const MultipleVariableChart: React.FC<MultipleVariableChartProps> = ({
   };
 
   return (
+    <>
+    <div className="centered-container">
     <Plot
       data={dataSeries.map((series) => ({
         x: series.x,
@@ -46,6 +49,9 @@ const MultipleVariableChart: React.FC<MultipleVariableChartProps> = ({
       }))}
       layout={adjustedLayout}
     />
+    </div>
+    <hr></hr>
+    </>
   );
 };
 

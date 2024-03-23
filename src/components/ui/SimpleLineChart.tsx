@@ -21,6 +21,8 @@ const SimpleLineChart: React.FC<SimpleLineChartProps> = ({
   marker,
 }) => {
   return (
+    <>
+    <div className="centered-container">
     <Plot
       data={[
         {
@@ -33,6 +35,9 @@ const SimpleLineChart: React.FC<SimpleLineChartProps> = ({
       ]}
       layout={layout}
     />
+    </div>
+    <hr></hr>
+    </>
   );
 };
 
