@@ -1,6 +1,7 @@
 // SignUp.tsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Background from "../components/common/Background";
 
 const SignUp: React.FC = () => {
   const [firstName, setFirstName] = useState("");
@@ -23,6 +24,8 @@ const SignUp: React.FC = () => {
   };
 
   return (
+
+    <Background>
     <form className="container mt-5" onSubmit={handleSubmit}>
       <h2>Sign Up</h2>
       <div className="mb-3">
@@ -94,6 +97,7 @@ const SignUp: React.FC = () => {
         </Link>
       </div>
     </form>
+    </Background>
   );
 };
 

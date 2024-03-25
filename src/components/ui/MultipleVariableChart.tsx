@@ -1,6 +1,8 @@
 import React from "react";
 import Plot from "react-plotly.js";
+
 import '../../App.css';
+import MultipleVariableChartOptions from "./MultipleVariableChartOptions";
 
 interface DataSeries {
   x: number[]; // Assuming 'x' is always time
@@ -33,10 +35,13 @@ const MultipleVariableChart: React.FC<MultipleVariableChartProps> = ({
     yaxis: {
       title: "Arbitrary Units",
     },
+    paper_bgcolor: 'rgba(255,255,255,0.6)', // Sets the background color of the plotting area with transparency
+    plot_bgcolor: 'rgba(255,255,255,0.1)', // Sets the background color inside the plot with transparency
   };
 
   return (
     <>
+    <MultipleVariableChartOptions/>
     <div className="centered-container">
     <Plot
       data={dataSeries.map((series) => ({

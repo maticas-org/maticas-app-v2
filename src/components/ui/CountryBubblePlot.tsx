@@ -1,5 +1,6 @@
 import React from "react";
 import Plot from "react-plotly.js";
+import MultipleVariableChartOptions from "./MultipleVariableChartOptions";
 
 interface PlotData {
   lon: number[];
@@ -17,6 +18,9 @@ const CountryBubblePlot: React.FC<CountryBubblePlotProps> = ({
   country,
 }) => {
   return (
+    <>
+    <MultipleVariableChartOptions/>
+    <div className="centered-container">
     <Plot
       data={[
         {
@@ -57,8 +61,12 @@ const CountryBubblePlot: React.FC<CountryBubblePlotProps> = ({
         width: 800,
         height: 600,
         title: `Environmental Variable Magnitude in ${country}`,
+        paper_bgcolor: 'rgba(255,255,255,0.7)', // Sets the background color of the plotting area with transparency
+        plot_bgcolor: 'rgba(255,255,255,0.1)', // Sets the background color inside the plot with transparency
       }}
     />
+    </div>
+    </>
   );
 };
 

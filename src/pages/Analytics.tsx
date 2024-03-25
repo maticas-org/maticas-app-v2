@@ -1,8 +1,6 @@
-import SimpleLineChart from "../components/ui/SimpleLineChart";
-import MultipleVariableChart from "../components/ui/MultipleVariableChart";
-import CountryBubblePlot from "../components/ui/CountryBubblePlot";
-import MultipleVariableChartOptions from "../components/ui/MultipleVariableChartOptions";
-import MultiSelectDropdown from "../components/common/MultiSelectDropdown";
+import Background                   from "../components/common/Background";
+import CountryBubblePlot            from "../components/ui/CountryBubblePlot";
+import MultipleVariableChart        from "../components/ui/MultipleVariableChart";
 
 const Analytics: React.FC = () => {
   const plotData = {
@@ -12,14 +10,13 @@ const Analytics: React.FC = () => {
   };
 
 
-
   return (
     <>
+      <Background>
       <div>
         <h1 className="centered-container" style={{ marginTop: "20px", marginBottom : "50px" }}>
           Analytics
         </h1>
-        <MultipleVariableChartOptions/>
         <MultipleVariableChart
           dataSeries={[
             {
@@ -44,26 +41,27 @@ const Analytics: React.FC = () => {
           }}
         />
 
-        <MultipleVariableChartOptions/>
-        <SimpleLineChart
-          data={{
-            x: [1, 2, 3, 4], // Example x-axis values (time)
-            y: [20, 21, 19, 22], // Example y-axis values
-          }}
+        <MultipleVariableChart
+          dataSeries={[
+            {
+              x: [1, 2, 3, 4], // Example x-axis values (time)
+              y: [20, 21, 19, 22], // Example y-axis values for temperature
+              name: "Temperature",
+              mode: "lines+markers",
+              marker: { color: "red" },
+            },
+          ]}
           layout={{
             width : window.innerWidth * 0.95,
             height : 400,
             title: "Temperature Over Time",
-            xaxis: { title: "Time" },
-            yaxis: { title: "Temperature (°C)" },
           }}
-          mode="lines+markers"
-          marker={{ color: "red" }}
         />
       </div>
       <div>
         <CountryBubblePlot data={plotData} country="COL" />
       </div>
+      </Background>      
     </>
   );
 };

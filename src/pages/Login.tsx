@@ -1,6 +1,7 @@
 // Login.tsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Background from "../components/common/Background";
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState("");
@@ -13,6 +14,8 @@ const Login: React.FC = () => {
   };
 
   return (
+
+    <Background>
     <form className="container mt-5" onSubmit={handleSubmit}>
       <h2>Login</h2>
       <div className="mb-3">
@@ -48,6 +51,7 @@ const Login: React.FC = () => {
         </Link>
       </div>
     </form>
+    </Background>
   );
 };
 

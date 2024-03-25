@@ -1,5 +1,4 @@
 import React from 'react';
-import CustomDropdown from '../common/MultiSelectDropdown';
 import MultiSelectDropdown from '../common/MultiSelectDropdown';
 import DateTimeRangeSelector from '../common/DateTimeRangeSelector';
 
