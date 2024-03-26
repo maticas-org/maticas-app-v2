@@ -13,7 +13,9 @@ const DateTimeRangeSelector: React.FC<DateTimeRangeSelectorProps> = () => {
 
   return (
     <>
-    <p className='centered-container'>Please select range date for you to visualize the data</p>
+    <p className='centered-container' style={{minWidth: '20vw', maxWidth: '50vw', justifyContent: 'center', textAlign: 'center'}}>
+      Please select range date for you to visualize the data
+    </p>
     <div className="date-range-selector">
     <div className="date-picker-container">
       <b><label>Start </label></b>
@@ -25,6 +27,7 @@ const DateTimeRangeSelector: React.FC<DateTimeRangeSelectorProps> = () => {
         endDate={endDate}
         showTimeSelect
         dateFormat="MMMM d, yyyy h:mm aa"
+        className='rounded-border date-picker-container'
       />
     </div>
 
@@ -39,6 +42,7 @@ const DateTimeRangeSelector: React.FC<DateTimeRangeSelectorProps> = () => {
         minDate={startDate}
         showTimeSelect
         dateFormat="MMMM d, yyyy h:mm aa"
+        className='rounded-border date-picker-container'
       />
     </div>
   </div>

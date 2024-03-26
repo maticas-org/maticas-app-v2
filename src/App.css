@@ -4,13 +4,15 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto; /* Adds automatic margin on the sides to center the container, and optional margin on top and bottom */
+    padding: 5px 0; /* Adds some space inside the container around your content */
   }
   
   .date-picker-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 5vw; /* Adds automatic margin on the sides to center the container, and optional margin on top and bottom */
+    margin: 0 1vw; /* Adds automatic margin on the sides to center the container, and optional margin on top and bottom */
+    max-width: 40vw; /* Ensures the width does not exceed 40% of the viewport width */
   }
 
   .centered-container {
@@ -36,3 +38,18 @@
     box-sizing: border-box; /* Ensures padding doesn't add to the width */
   }
   
+
+.rounded-border{
+  border-radius: 30px;
+}
+
+.select-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+  margin: 0 auto; /* Adds automatic margin on the sides to center the container, and optional margin on top and bottom */
+  min-width: 35vw; /* Sets the width to 35% of the viewport width */
+  max-width: 55vw; /* Ensures the width does not exceed 40% of the viewport width */
+  border-radius: 30px;
+}

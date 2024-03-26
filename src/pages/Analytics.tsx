@@ -36,7 +36,7 @@ const Analytics: React.FC = () => {
           ]}
           layout={{
             width : window.innerWidth * 0.95,
-            height : 400,
+            height : window.outerHeight * 0.4,
             title: "Temperature and Humidity Over Time",
           }}
         />
@@ -53,7 +53,7 @@ const Analytics: React.FC = () => {
           ]}
           layout={{
             width : window.innerWidth * 0.95,
-            height : 400,
+            height : window.outerHeight * 0.4,
             title: "Temperature Over Time",
           }}
         />

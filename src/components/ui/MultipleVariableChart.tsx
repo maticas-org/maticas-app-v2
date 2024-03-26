@@ -35,14 +35,19 @@ const MultipleVariableChart: React.FC<MultipleVariableChartProps> = ({
     yaxis: {
       title: "Arbitrary Units",
     },
-    paper_bgcolor: 'rgba(255,255,255,0.6)', // Sets the background color of the plotting area with transparency
-    plot_bgcolor: 'rgba(255,255,255,0.1)', // Sets the background color inside the plot with transparency
+    paper_bgcolor: 'rgba(255,255,255,1)', // Sets the background color of the plotting area with transparency
+    plot_bgcolor: 'rgba(255,255,255,1)', // Sets the background color inside the plot with transparency
   };
 
   return (
     <>
     <MultipleVariableChartOptions/>
-    <div className="centered-container">
+    <div 
+      style={{borderRadius: '25px',
+              boxShadow: '0 0 0 rgba(0,0,0,0.5)',
+              overflow: 'hidden', width: '95vw',
+              alignContent: 'center', margin: 'auto',}}
+    >
     <Plot
       data={dataSeries.map((series) => ({
         x: series.x,

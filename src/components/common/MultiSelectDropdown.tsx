@@ -22,7 +22,10 @@ const MultiSelectDropdown: React.FC<MultiSelectDropdownProps> = ({
       isMulti={isMulti}
       placeholder={placeholder}
       onChange={onChange}
-      className='centered-container'
+      className='select-container'
+      styles={{
+        control: (provided) => ({ ...provided, width: '100%', justifyContent: 'center', alignItems: 'center' }),
+      }}
     />
   );
 };
